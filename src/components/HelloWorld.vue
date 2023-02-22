@@ -57,7 +57,7 @@ export default {
       this.result = response.data;
     },
     async mcOperation(){
-      const response = await axios.post("http://127.0.0.1:8000/mcoperation/");
+      const response = await axios.get("http://127.0.0.1:8000/mcoperation/");
       console.log(response.data);
       this.result = "";
     },
@@ -75,7 +75,7 @@ export default {
       let newValue ={
         client : this.result
       } 
-      const response = await axios.post(
+      const response = await axios.get(
         "http://127.0.0.1:8000/mroperation/",newValue
       );
       console.log(response.data);
@@ -85,7 +85,7 @@ export default {
       let newValue ={
         client : this.result
       } ;
-      const response = await axios.post(
+      const response = await axios.put(
         "http://127.0.0.1:8000/maddoperation/",newValue 
       );
       console.log(response.data);
